@@ -1,0 +1,58 @@
+{
+  "name": "forus-wallet-task",
+  "version": "0.0.1",
+  "description": "Recuritment excercise: building a simple wallet library",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "dotenv -e .env.test jest -- ----detectOpenHandles",
+    "start:cli": "node ./dist/cli/index",
+    "build": "tsc",
+    "knex:migrate:latest:test": " dotenv -e .env.test  -e .env knex -- migrate:latest --knexfile ./src/db/knexfile.ts",
+    "knex:migrate:down:test": "dotenv -e .env.test -e  knex -- migrate:down --knexfile ./src/db/knefile.ts",
+    "knex:migrate:rollback:test": "dotenv -e .env.test -e .env  knex -- migrate:rollback --knexfile ./src/db/knefile.ts",
+    "knex:migrate:latest": "dotenv  -e .env knex -- migrate:latest --knexfile ./src/db/knexfile.ts",
+    "knex:migrate:down": "dotenv -e .env  knex -- migrate:down --knexfile ./src/db/knefile.ts",
+    "knex:seed:make": "dotenv -e .env knex -- seed:make --knexfile ./src/db/knexfile.ts",
+    "knex:seed:run": "dotenv -e .env knex -- seed:run --knexfile ./src/db/knexfile.ts",
+    "knex:migrate:rollback": "dotenv -e .env  knex -- migrate:rollback --knexfile ./src/db/knefile.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foruslabs/be-Oluwayanmife-Akeju.git"
+  },
+  "author": "Oluwayanmife Akeju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foruslabs/be-Oluwayanmife-Akeju/issues"
+  },
+  "homepage": "https://github.com/foruslabs/be-Oluwayanmife-Akeju#readme",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/inquirer": "^8.2.0",
+    "@types/jest": "^27.4.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "eslint": "^8.7.0",
+    "jest": "^27.4.7",
+    "prisma": "^3.8.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^14.3.2",
+    "dotenv-cli": "^4.1.1",
+    "inquirer": "^8.2.0",
+    "joi": "^17.6.0",
+    "knex": "^1.0.1",
+    "pg": "^8.7.1"
+  },
+  "prisma": {
+    "schema": "src/db/schema.prisma"
+  }
+}
