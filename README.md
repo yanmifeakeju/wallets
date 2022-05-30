@@ -1,6 +1,4 @@
-# ForusLab Recruitment Test submitted by Oluwayanmife Akeju
-
-Design a wallet library that does the follwoing:
+A wallet library that does the follwoing:
 
 - Making a deposit to an account
 - Making a withdrawal from an account
